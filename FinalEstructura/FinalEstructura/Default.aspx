@@ -8,7 +8,7 @@
     <p>
         <h3>Digite las asignaturas</h3>
         <input type="text" class="form-control" name="materia" id="materia" placeholder="Asignaciones" /><br />
-        <input type="button" class="btn btn-success" name="agregar" id="agregar" value="Enviar" onclick="" />
+        <input type="submit" class="btn btn-success" name="agregar" id="agregar" value="Enviar" onclick="" />
     </p>
 
 </div>
@@ -43,7 +43,9 @@
 
         var asignaturas = new Array();
         
+
         $("#agregar").click(function (e) {
+            event.preventDefault();
             console.log("entre")
             asignaturas.push($('#materia').val())
 
